@@ -564,6 +564,7 @@ address {
   transform: translate(-50%, -50%) scale(1);
   transition: scale 250ms var(--time-function);
 
+  padding: 40px;
   min-width: 528px;
   min-height: 581px;
   border-radius: 4px;
@@ -597,6 +598,34 @@ address {
 
 .button .icon {
   display: block;
+}
+
+.form-title {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+    font-weight: 700;
+font-size: 20px;
+line-height: 1.15;
+text-align: center;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.form-label {
+  margin-bottom: 4px;
+  cursor: pointer;
+
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.01em;
+
+color: var(--desc-color);
 }
 
 /* SCC for portfolio.html */
