@@ -724,12 +724,19 @@ address {
   color: var(--placeholder-text-color);
 }
 
-.label-checkbox {
+.form-checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
+
+.label-checkbox {
+  margin-right: 5px;
+
+  line-height: 1.17;
+  color: var(--desc-color);
+  }
 
 .input-checkbox:checked + .icon-wrap > .icon-cheked {
   opacity: 1;
@@ -768,18 +775,6 @@ address {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-}
-
-.input-checkbox:checked + .icon {
-  background-image: url(../images/icons.svg#icon-check);
-  background: var(--accent-color);
-}
-
-.checkbox-desc {
-  margin-right: 5px;
-
-  line-height: 1.17;
-  color: var(--desc-color);
 }
 
 .checkbox-link {

@@ -520,26 +520,28 @@
               placeholder="Введіть текст"
             ></textarea>
           </div>
-          <label class="label-checkbox">
-            <input
-              class="input-checkbox"
-              type="checkbox"
-              name="checkbox"
-              value="checkbox"
-            />
-            <svg class="icon-wrap" width="16" height="15">
-              <use
-                class="icon-uncheked"
-                href="./images/icons.svg#icon-checkbox"
-              ></use>
-              <use
-                class="icon-cheked"
-                href="./images/icons.svg#icon-check"
-              ></use>
-            </svg>
-            <span class="checkbox-desc">Погоджуюся з розсилкою та приймаю</span>
-            <a class="checkbox-link" href="#">Умови договору</a>
-          </label>
+          <div class="form-checkbox">
+              <input
+                class="input-checkbox"
+                type="checkbox"
+                name="checkbox"
+                value="checkbox"
+                id="checkbox"
+              />
+              <svg class="icon-wrap" width="16" height="15">
+                <use
+                  class="icon-uncheked"
+                  href="./images/icons.svg#icon-checkbox"
+                ></use>
+                <use
+                  class="icon-cheked"
+                  href="./images/icons.svg#icon-check"
+                ></use>
+              </svg>
+              <label class="label-checkbox" for="checkbox">Погоджуюся з розсилкою та приймаю
+              </label>
+              <a class="checkbox-link" href="#">Умови договору</a>
+          </div>
           <button class="button" type="submit">Відправити</button>
         </form>
       </div>
