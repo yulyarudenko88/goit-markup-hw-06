@@ -17,7 +17,8 @@
   --border-project-color: #eeeeee;
   --border-header-color: #ececec;
   --border-close-button: rgba(0, 0, 0, 0.1);
-  --border-form: rgba(33, 33, 33, 0.2);
+  --border-input-form: rgba(33, 33, 33, 0.2);
+  --border-input-footer: rgba(255, 255, 255, 0.3);
   --social-icon-color: #afb1b8;
   --placeholder-text-color: rgba(117, 117, 117, 0.5);
 
@@ -498,6 +499,10 @@ address {
   transition: color 250ms var(--time-function);
 }
 
+.item-socials {
+  margin-right: 93px;
+}
+
 .item-socials .socials-list {
   display: flex;
   gap: 10px;
@@ -522,7 +527,9 @@ address {
   background: var(--accent-color);
 }
 
-.title-socials {
+.title-socials,
+.footer-form > .form-title {
+  display: inline-block;
   margin-top: 0;
   margin-bottom: 20px;
 
@@ -532,6 +539,45 @@ address {
   text-transform: uppercase;
 
   color: var(--white-color);
+}
+
+.footer-form-wrap {
+  display: flex;
+}
+
+.footer-input {
+  outline: none;
+  padding-left: 16px;
+  margin-right: 12px;
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid var(--border-input-footer);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px var(--shadow-btn);
+  background: var(--section-background-color);
+  transition: border 250ms var(--time-function);
+}
+
+.footer-input:focus {
+  border: 1px solid var(--white-color);
+}
+
+.footer-input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+
+  color: var(--secondary-white-color);
+}
+
+.footer-form-wrap > .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  height: 50px;
+  width: 200px;
 }
 
 /* Backdrop&Modal */
@@ -649,7 +695,7 @@ address {
   padding: 0 0 0 42px;
   border-radius: 4px;
 
-  border: 1px solid var(--border-form);
+  border: 1px solid var(--border-input-form);
   transition: border 250ms var(--time-function);
 }
 
@@ -662,7 +708,7 @@ address {
   fill: var(--accent-color);
 }
 
-.form-field > .form-textarea {
+.form-textarea {
   resize: none;
   height: 120px;
   padding: 12px 16px;
@@ -677,6 +723,77 @@ address {
   letter-spacing: 0.01em;
   color: var(--placeholder-text-color);
 }
+
+.label-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.input-checkbox:checked + .icon-wrap > .icon-cheked {
+  opacity: 1;
+}
+
+.input-checkbox:checked + .icon-wrap > .icon-unchecked {
+  opacity: 0;
+}
+
+.icon-wrap {
+  position: relative;
+  margin-right: 8px;
+}
+
+.icon-uncheked {
+  opacity: 1;
+  transition: opacity 250ms var(--time-function);
+}
+
+.icon-cheked {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 250ms var(--time-function);
+}
+
+.input-checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.input-checkbox:checked + .icon {
+  background-image: url(../images/icons.svg#icon-check);
+  background: var(--accent-color);
+}
+
+.checkbox-desc {
+  margin-right: 5px;
+
+  line-height: 1.17;
+  color: var(--desc-color);
+}
+
+.checkbox-link {
+  line-height: 1.17;
+  color: var(--accent-color);
+}
+
+.form > .button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 52px;
+}
+
 /* SCC for portfolio.html */
 
 /* Our projects section */
@@ -767,7 +884,7 @@ address {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms var(--time-function);
 
   padding: 63px 24px;

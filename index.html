@@ -418,7 +418,7 @@
           </div>
         </div>
         <div class="item-socials">
-          <h2 class="title-socials">Приєднуйтесь</h2>
+          <strong class="title-socials">Приєднуйтесь</strong>
           <ul class="socials-list list">
             <li>
               <a class="list-icon" href="#">
@@ -449,6 +449,17 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-form">
+          <strong class="form-title">Підпишіться на розсилку</strong>
+          <div class="footer-form-wrap">
+            <input class="footer-input" type="email" name="email" placeholder="E-mail">
+            <button class="button" type="submit">Підписатися
+              <svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </footer>
@@ -494,7 +505,7 @@
               </svg>
             </div>
           </div>
-          <div class="form-field">
+          <div>
             <label class="form-label" for="feetback">Коментар</label>
             <textarea class="form-textarea"
               name="feetback"
@@ -502,12 +513,15 @@
               placeholder="Введіть текст"
             ></textarea>
           </div>
-          <div>
-            <label>
-              <input type="checkbox" name="checkbox" value="checkbox" />
-              Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a>
-            </label>
-          </div>
+          <label class="label-checkbox">
+              <input class="input-checkbox" type="checkbox" name="checkbox" value="checkbox" />
+              <svg class="icon-wrap" width="16" height="15">
+                <use class="icon-uncheked" href="./images/icons.svg#icon-checkbox"></use>
+                <use class="icon-cheked" href="./images/icons.svg#icon-check"></use>
+              </svg>             
+              <span class="checkbox-desc">Погоджуюся з розсилкою та приймаю</span>
+              <a class="checkbox-link" href="#">Умови договору</a>
+          </label>
           <button class="button" type="submit">Відправити</button>
         </form>
       </div>
