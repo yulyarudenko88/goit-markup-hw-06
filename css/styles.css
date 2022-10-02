@@ -552,11 +552,18 @@ address {
   width: 358px;
   height: 50px;
 
+  color: var(--white-color);
+
   border: 1px solid var(--border-input-footer);
   border-radius: 4px;
   box-shadow: 0px 4px 4px var(--shadow-btn);
   background: var(--section-background-color);
   transition: border 250ms var(--time-function);
+}
+
+.footer-input:-webkit-autofill {
+  -webkit-text-fill-color: var(--white-color);
+  -webkit-box-shadow: 0 0 0 100px var(--section-background-color) inset;
 }
 
 .footer-input:focus {
@@ -700,20 +707,26 @@ address {
 }
 
 .form-input:focus,
-.form-textarea:focus {
+.form-input:hover,
+.form-textarea:focus,
+.form-textarea:hover {
   border-color: var(--accent-color);
 }
 
-.form-input:focus + .icon {
+.form-input:focus + .icon,
+.form-input:hover + .icon {
   fill: var(--accent-color);
+}
+
+.field-textarea {
+  margin-bottom: 20px;
 }
 
 .form-textarea {
   resize: none;
   height: 120px;
   padding: 12px 16px;
-  margin-bottom: 20px;
-
+  
   transition: border 250ms var(--time-function);
 }
 
@@ -732,11 +745,16 @@ address {
 }
 
 .label-checkbox {
+  display: flex;
+}
+
+.checkbox-desc {
   margin-right: 5px;
 
   line-height: 1.17;
   color: var(--desc-color);
-  }
+}
+ 
 
 .input-checkbox:checked + .icon-wrap > .icon-cheked {
   opacity: 1;
@@ -745,6 +763,10 @@ address {
 .input-checkbox:checked + .icon-wrap > .icon-unchecked {
   opacity: 0;
 }
+
+/* .icon-unchecked:focus {
+  color: var(--accent-color);
+} */
 
 .icon-wrap {
   position: relative;
