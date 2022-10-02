@@ -563,7 +563,7 @@ address {
 
 .footer-input:-webkit-autofill {
   -webkit-text-fill-color: var(--white-color);
-  -webkit-box-shadow: 0 0 0 100px var(--section-background-color) inset;
+  box-shadow: 0 0 0 100px var(--section-background-color) inset;
 }
 
 .footer-input:focus {
