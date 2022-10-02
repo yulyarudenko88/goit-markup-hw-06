@@ -748,6 +748,11 @@ address {
   display: flex;
 }
 
+.input-checkbox:hover ~ .icon-wrap > .icon-uncheked,
+.input-checkbox:focus ~ .icon-wrap > .icon-uncheked {
+  fill: var(--accent-color);
+}
+
 .checkbox-desc {
   margin-right: 5px;
 
