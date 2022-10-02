@@ -711,6 +711,7 @@ address {
 .form-textarea:focus,
 .form-textarea:hover {
   border-color: var(--accent-color);
+  cursor: pointer;
 }
 
 .form-input:focus + .icon,
@@ -746,11 +747,13 @@ address {
 
 .label-checkbox {
   display: flex;
+  cursor: pointer;
 }
 
 .input-checkbox:hover ~ .icon-wrap > .icon-uncheked,
 .input-checkbox:focus ~ .icon-wrap > .icon-uncheked {
   fill: var(--accent-color);
+  
 }
 
 .checkbox-desc {
@@ -769,18 +772,16 @@ address {
   opacity: 0;
 }
 
-/* .icon-unchecked:focus {
-  color: var(--accent-color);
-} */
 
 .icon-wrap {
   position: relative;
   margin-right: 8px;
-}
+  }
 
 .icon-uncheked {
   opacity: 1;
-  transition: opacity 250ms var(--time-function);
+  transition: opacity 250ms var(--time-function),
+  fill 250ms var(--time-function);
 }
 
 .icon-cheked {
